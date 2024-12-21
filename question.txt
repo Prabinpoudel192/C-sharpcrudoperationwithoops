@@ -1,0 +1,35 @@
+Question: Student Management System
+Create a console application in C# to manage student records. The program should demonstrate the use of get/set, CRUD operations, and polymorphism.
+Requirements:
+Define a base class Student:
+Properties:
+StudentID (int) (use get/set)
+Name (string) (use get/set)
+Age (int) (use get/set)
+Method:
+DisplayDetails(): Displays the student's details.
+Define a derived class GraduateStudent:
+Inherits from Student.
+Additional Property:
+Degree (string) (use get/set)
+Override the DisplayDetails() method to include the Degree information.
+CRUD Operations:
+Implement the following functionalities in the main program:
+AddStudent(Student student): Adds a new student (Student or GraduateStudent).
+UpdateStudent(int studentID, string name, int age): Updates a student's basic details.
+DeleteStudent(int studentID): Deletes a student by their StudentID.
+GetStudent(int studentID): Retrieves a specific student's details.
+ListStudents(): Displays all student records.
+Main Program:
+
+Create a menu-driven console application that allows the user to:
+Add a Student or GraduateStudent.
+Update a student's details.
+Delete a student record.
+View details of a specific student.
+List all students.
+Expected Output:
+A simple console interface that allows CRUD operations on a list of students, demonstrating:
+
+Encapsulation using get/set.
+Polymorphism by overriding the DisplayDetails() method in the GraduateStudent class.
