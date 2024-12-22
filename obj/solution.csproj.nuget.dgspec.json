@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/zoop/Desktop/chatgpt/solution/solution.csproj": {}
+    "/home/zoop/Desktop/C-sharpcrudoperationwithoops/solution.csproj": {}
   },
   "projects": {
-    "/home/zoop/Desktop/chatgpt/solution/solution.csproj": {
+    "/home/zoop/Desktop/C-sharpcrudoperationwithoops/solution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zoop/Desktop/chatgpt/solution/solution.csproj",
+        "projectUniqueName": "/home/zoop/Desktop/C-sharpcrudoperationwithoops/solution.csproj",
         "projectName": "solution",
-        "projectPath": "/home/zoop/Desktop/chatgpt/solution/solution.csproj",
+        "projectPath": "/home/zoop/Desktop/C-sharpcrudoperationwithoops/solution.csproj",
         "packagesPath": "/home/zoop/.nuget/packages/",
-        "outputPath": "/home/zoop/Desktop/chatgpt/solution/obj/",
+        "outputPath": "/home/zoop/Desktop/C-sharpcrudoperationwithoops/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/zoop/.nuget/NuGet/NuGet.Config"

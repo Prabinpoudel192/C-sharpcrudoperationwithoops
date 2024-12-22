@@ -1,3 +1,5 @@
+using MySql.Data.MySqlClient;
+
 namespace chatgpt{
     class Student:Dbcon{
         private int StudentId,Age;
@@ -6,18 +8,31 @@ namespace chatgpt{
             get{
                 return StudentId;
             }set{
-                if(value>9999 || value<0){
-                    if(value<0){
-                        StudentId=0;
-                    }else if(value>9999){
-                        StudentId=9999;
-                    }
-                }else{
-                        StudentId=value;
-                    }
-            }
+                using(MySqlConnection con=new MySqlConnection(dbcon())){
+                    con.Open();
+                    start:
+                    string query=$"select *from s_details where StudentID={value}";
+                    using(MySqlCommand com=new MySqlCommand(query,con)){
+                        using(MySqlDataReader read=com.ExecuteReader()){
+                            if(read.HasRows){
+                                value++;
+                                Console.WriteLine($"Duplicate Student Id, Assigning and Check for availibilty of {value}");
+                                goto start;
+                            }else{
+                            if(value<0){
+                                Console.WriteLine("Invalid Student ID, Cannot be negative");
+                                goto start;
+                            }else{
+                                StudentId=value;
+                            }
+                        }
 
-        }
+                    }
+
+                }}
+           
+
+        }}
         public int Agegetset{
             get{
                 return Age;

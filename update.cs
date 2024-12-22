@@ -36,7 +36,7 @@ namespace chatgpt{
         Console.Write("Age:");
         int.TryParse(Console.ReadLine(),out int newAge);
         Agegetset=newAge;
-        Console.Write("Degree");
+        Console.Write("Degree:");
         Degreegetset=Console.ReadLine();
         using(MySqlConnection con=new MySqlConnection(dbcon())){
             con.Open();
@@ -45,7 +45,12 @@ namespace chatgpt{
             update s_degree set Degree='{Degreegetset}' where StudentID={a};
             commit;
             ";
+            MySqlCommand com=new MySqlCommand(query,con);
+            com.ExecuteNonQuery();
+                
+            
         }
+
     }
     }
 }
